@@ -34,10 +34,25 @@ Node *tailP(Node *Head){
     }
     return alpha;
 }
+void deletion(Node *head,int num){
+
+    Node *alpha = head;
+    Node *temp = nullptr;
+    while(alpha){
+        if(alpha->value == num){
+            alpha->prev->next = alpha->next;
+            alpha->next->prev = alpha->prev;
+            temp = alpha;
+            alpha = alpha->next;
+            delete temp;
+        }
+
+    }
+}
 int main(){
     int arr[] = {1,2,3,4,5,6,7,-1};
     Node *Head = create(arr,0,nullptr);
     Node *tail = tailP(Head);
-    
+    deletion(Head,7);
 
 }
