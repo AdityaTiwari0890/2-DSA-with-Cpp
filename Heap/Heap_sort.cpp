@@ -5,6 +5,7 @@ class Heap{
     int size;
     int capacity;
     int *arr;
+    int max_size;
     void Heapify(int index){
         int largest = index;
         int left_child = 2*index+1;
@@ -38,6 +39,7 @@ class Heap{
             swap(arr[(index - 1)/2],arr[index]);
             index = (index - 1)/2;
         }
+        max_size = max(size,max_size);
     }
     void print(){
         for(int i = 0;i<size;i++){
@@ -54,23 +56,24 @@ class Heap{
         size--;
         Heapify(0);
     }
-    // void sort(){
-    //     for(int i =size;i<capacity;i++){
-    //         cout<<arr[i]<<" ";
-    //     }
-    // }
+    void Sort(){
+        for(int i =max_size;i>=0;i--){
+            cout<<arr[i]<<" ";
+        }
+        cout<<endl;
+    }
 };
 int main(){
     int size = 10;
-    Heap hp(10);
-    for(int i =1;i<14;i++){
+    Heap hp(11);
+    for(int i =1;i<11;i++){
         hp.insert(i);
     }
     hp.print();
-    for(int i =1;i<14;i++){
+    for(int i =0;i<10;i++){
         hp.Delete();
     }
-    // hp.sort();
+    hp.Sort();
     // hp.print();
 
 }
