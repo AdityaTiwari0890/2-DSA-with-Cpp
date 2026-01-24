@@ -11,5 +11,11 @@ int main(){
         while(!que.empty()&&arr[que.front()-'a']>1){
             que.pop();
         }
+        if(que.empty()){
+            ans.push_back('#');
+        }else{
+            ans.push_back(que.front());
+        }
     }
+    cout<<ans;
 }
