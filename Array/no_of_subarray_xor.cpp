@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 int xors(vector<int>&arr,int n){
-    vector<int> nums;
     int num = 0;
     unordered_map<int,int> mp;
     mp[0] = 1;
