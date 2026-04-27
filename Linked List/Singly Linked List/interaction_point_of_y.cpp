@@ -1,5 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
+class Node {
+    public:
+    int val;
+    Node *next;
+    Node(int val){
+        val = val;
+        next = nullptr;
+    }
+};
 Node *common(Node *head1,Node *head2){
     Node *h1 = head1;
     Node *h2 = head2;
