@@ -14,4 +14,5 @@ void func(int ind, vector<int>arr,int n,int target,vector<int>&curr, vector<vect
     }
     func(ind+1,arr,n,target,curr,result);
 }
+
 int main(){}
